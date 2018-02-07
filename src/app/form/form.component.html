@@ -6,14 +6,24 @@
   <div class="form-group">
       <label for="firstName">First Name</label>
       <input ngModel name="firstName" id="firstName" type="text" class="form-control"
-      #firstName="ngModel" required minlength="3" maxlength="10" pattern="banana"
+      #firstName="ngModel" 
+      required minlength="3"
+      maxlength="10" 
+      pattern="banana"
        (change)="log(firstName)" 
       >
       <!-- <div  *ngIf="firstName.touched && !firstName.valid" class="alert alert-danger">First Name is required.</div> -->
-      <div  *ngIf="firstName.touched && !firstName.valid" class="alert alert-danger">
-        <div *ngIf="firstName.errors.required">First Name is required</div>
-        <div *ngIf="firstName.errors.minlength"> First Name should be minimum {{firstName.errors.minlength.requiredLength}} characters</div>
-        <div *ngIf="firstName.errors.pattern"> First Name doesn't match the pattern</div>
+      <div  
+      *ngIf="firstName.touched && !firstName.valid" 
+      class="alert alert-danger">
+        <div *ngIf="firstName.errors.required">
+          First Name is required</div>
+        <div *ngIf="firstName.errors.minlength"> 
+          First Name should be minimum {{firstName.errors.minlength.requiredLength}} characters
+        </div>
+        <div *ngIf="firstName.errors.pattern"> 
+          First Name doesn't match the pattern
+        </div>
       </div>
   </div>
   <div class="form-group">
