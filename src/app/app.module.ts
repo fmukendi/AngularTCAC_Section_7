@@ -1,3 +1,5 @@
+import { NgFormMaterialComponent } from './ng-form-material/ng-form-material.component';
+import { MaterialModule } from './material.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -38,14 +40,16 @@ import { NgModelGroupComponent } from './ng-model-group/ng-model-group.component
         MatInputModule,
         MatCardModule,
         MomentModule ,
-        HttpClientModule
+        HttpClientModule,
+        MaterialModule
     ],
     declarations: [
         AppComponent,
         routedComponents,
         FormComponent,
         NgFormComponent,
-        NgModelGroupComponent
+        NgModelGroupComponent,
+        NgFormMaterialComponent
     ],
     providers: [
     ],

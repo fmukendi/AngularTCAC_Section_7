@@ -1,0 +1,97 @@
+<div>
+  <form
+  autocomplete="off" 
+  #houseForm="ngForm" 
+   >
+     <div>
+        <div>
+            <mat-form-field >
+              <input matInput 
+                     placeholder="Address"
+                     id="address" 
+                    name="address" 
+                    [(ngModel)]="house.Address"
+                    required
+                     >
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field >
+                <input matInput 
+                       placeholder="City"
+                       id="city" 
+                      name="city" 
+                      [(ngModel)]="house.City"
+                      required
+                       >
+              </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field >
+                <input matInput 
+                       placeholder="County"
+                       id="county" 
+                      name="county" 
+                      [(ngModel)]="house.County"
+                      required
+                       >
+              </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field >
+                <input matInput 
+                       placeholder="Country"
+                       id="country" 
+                      name="country" 
+                      [(ngModel)]="house.Country"
+                      required
+                       >
+              </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field >
+                <input matInput 
+                       placeholder="State"
+                       id="state" 
+                      name="state" 
+                      [(ngModel)]="house.State"
+                      required
+                       >
+              </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field >
+                <input matInput 
+                       placeholder="Zip Code"
+                       id="zipCode" 
+                      name="zipCode" 
+                      [(ngModel)]="house.ZipCode"
+                      required
+                       >
+              </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-evenly end" >
+            <div  fxFlex="20%">
+                    <button
+                    (click)="submitForm(houseForm.value, houseForm)"
+                    mat-raised-button 
+                    color="primary">
+                     {{btnTxt}}
+                  </button>
+
+            </div>
+            <div  fxFlex="20%">
+                    <button 
+                    (click)='closeModal()'
+                    mat-raised-button 
+                    color="secondary">
+                     Cancel
+                  </button>
+
+            </div>
+        </div>
+  
+     </div>
+    </form>
+
+</div>

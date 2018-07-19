@@ -1,3 +1,4 @@
+import { NgFormMaterialComponent } from './ng-form-material/ng-form-material.component';
 import { NgModelGroupComponent } from './ng-model-group/ng-model-group.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -24,6 +25,10 @@ const routes: Routes = [
     {
         path: 'ngmodelgroup',
         component: NgModelGroupComponent
+    },
+    {
+        path: 'ngformmaterial',
+        component: NgFormMaterialComponent
     },
 
     // otherwise redirect to home
