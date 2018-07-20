@@ -1,3 +1,5 @@
+import { AddressComponent } from './ng-form-material/address.component';
+import { NestedNgFormComponent } from './ng-form-material/nested-ng-form/nested-ng-form.component';
 import { NgFormMaterialComponent } from './ng-form-material/ng-form-material.component';
 import { MaterialModule } from './material.module';
 import { NgModule } from '@angular/core';
@@ -49,7 +51,9 @@ import { NgModelGroupComponent } from './ng-model-group/ng-model-group.component
         FormComponent,
         NgFormComponent,
         NgModelGroupComponent,
-        NgFormMaterialComponent
+        NgFormMaterialComponent,
+        NestedNgFormComponent,
+        AddressComponent
     ],
     providers: [
     ],

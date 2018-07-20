@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '../../../node_modules/@angular/forms';
 
 @Component({
   selector: 'app-ng-form-material',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgFormMaterialComponent implements OnInit {
 
+  name = 'Nested template driven form';
   house = {
     Address: '',
     City: '',
@@ -21,12 +23,14 @@ export class NgFormMaterialComponent implements OnInit {
   ngOnInit() {
   }
 
-  submitForm(value, houseForm) {
-    alert('submitting form');
+  submitForm(value, houseForm: NgForm) {
+    console.log(value);
+    console.log(houseForm);
+    /* alert('submitting form'); */
   }
 
   closeModal() {
-    alert('closing modal');
+    /* alert('closing modal'); */
   }
 
 }

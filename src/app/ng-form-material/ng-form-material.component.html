@@ -10,66 +10,13 @@
                      placeholder="Address"
                      id="address" 
                     name="address" 
-                    [(ngModel)]="house.Address"
                     required
-                     >
+                    ngModel>
             </mat-form-field>
         </div>
-        <div>
-            <mat-form-field >
-                <input matInput 
-                       placeholder="City"
-                       id="city" 
-                      name="city" 
-                      [(ngModel)]="house.City"
-                      required
-                       >
-              </mat-form-field>
-        </div>
-        <div>
-            <mat-form-field >
-                <input matInput 
-                       placeholder="County"
-                       id="county" 
-                      name="county" 
-                      [(ngModel)]="house.County"
-                      required
-                       >
-              </mat-form-field>
-        </div>
-        <div>
-            <mat-form-field >
-                <input matInput 
-                       placeholder="Country"
-                       id="country" 
-                      name="country" 
-                      [(ngModel)]="house.Country"
-                      required
-                       >
-              </mat-form-field>
-        </div>
-        <div>
-            <mat-form-field >
-                <input matInput 
-                       placeholder="State"
-                       id="state" 
-                      name="state" 
-                      [(ngModel)]="house.State"
-                      required
-                       >
-              </mat-form-field>
-        </div>
-        <div>
-            <mat-form-field >
-                <input matInput 
-                       placeholder="Zip Code"
-                       id="zipCode" 
-                      name="zipCode" 
-                      [(ngModel)]="house.ZipCode"
-                      required
-                       >
-              </mat-form-field>
-        </div>
+
+        <app-nested-ng-form></app-nested-ng-form>
+        <address></address>
         <div fxLayout="row" fxLayoutAlign="space-evenly end" >
             <div  fxFlex="20%">
                     <button
@@ -90,8 +37,22 @@
 
             </div>
         </div>
-  
+  <pre>{{ houseForm.value | json }}</pre> <br><br>
      </div>
     </form>
 
 </div>
+
+<!-- <h2>Complex form with address component</h2>
+<form #myForm="ngForm">
+  <div>
+    <label>Firstname:</label>
+    <input type="text" name="firstName" ngModel>
+  </div>
+  <div>
+    <label>Lastname:</label>
+    <input type="text" name="lastName" ngModel>
+  </div>
+  <address></address>
+</form>
+<pre>{{ myForm.value | json }}</pre> -->
